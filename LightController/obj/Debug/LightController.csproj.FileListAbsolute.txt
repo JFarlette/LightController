@@ -1,0 +1,82 @@
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\JFarlette.LightController.Resources.resources
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\JFarlette.LightController.Resources.tinyresources
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\TinyResGen.cache
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\le\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\be\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\le\LightControllerApp.pdb
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\be\LightControllerApp.pdb
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LightControllerApp.pdb
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\le\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\le\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\be\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\be\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LE\NetMf.CommonExtensions.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\BE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\BE\NetMf.CommonExtensions.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\LE\NetMf.CommonExtensions.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\BE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\BE\NetMf.CommonExtensions.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\GHIElectronics.NETMF.Hardware.dll
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\GHIElectronics.NETMF.System.dll
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\NetMf.CommonExtensions.dll
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\GHIElectronics.NETMF.Hardware.xml
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\GHIElectronics.NETMF.System.xml
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\bin\Debug\NetMf.CommonExtensions.xml
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\be\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\be\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\le\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\le\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightControl\LightControl\obj\Debug\LightControllerApp.pdb
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\le\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\be\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\le\LightControllerApp.pdb
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\be\LightControllerApp.pdb
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LightControllerApp.pdb
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\le\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\le\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\be\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\be\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LE\NetMf.CommonExtensions.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\BE\GHIElectronics.NETMF.System.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\BE\NetMf.CommonExtensions.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\LE\NetMf.CommonExtensions.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\BE\GHIElectronics.NETMF.System.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\BE\NetMf.CommonExtensions.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\GHIElectronics.NETMF.Hardware.dll
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\GHIElectronics.NETMF.System.dll
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\NetMf.CommonExtensions.dll
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\GHIElectronics.NETMF.Hardware.xml
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\GHIElectronics.NETMF.System.xml
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\bin\Debug\NetMf.CommonExtensions.xml
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\JFarlette.LightController.Resources.resources
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\JFarlette.LightController.Resources.tinyresources
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\TinyResGen.cache
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\be\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\be\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\le\LightControllerApp.pe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\le\LightControllerApp.pdbx
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Dropbox\LightController\LightController\obj\Debug\LightControllerApp.pdb
