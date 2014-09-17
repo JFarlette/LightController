@@ -1,8 +1,9 @@
 ﻿using System;
-
+using System.Threading;
 using GHIElectronics.NETMF.FEZ;
 using Microsoft.SPOT.Hardware;
 using JFarlette.LightController.LCD_2x16;
+
 
 namespace JFarlette.LightController
 {
@@ -10,7 +11,8 @@ namespace JFarlette.LightController
     {
         public static void Main()
         {
-            //Test();
+            // RelayTest();
+            // ControllerTest();
             StartController();
         }
 
@@ -18,7 +20,7 @@ namespace JFarlette.LightController
         {
             FEZ_Shields.KeypadLCD.Initialize();
 
-            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.Di4);
+            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO14);
 
             Config config = new Config();
 
@@ -35,9 +37,9 @@ namespace JFarlette.LightController
             lc.Control();
         }
         
-        static void Test()
+        static void ControllerTest()
         {
-            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.Di4);
+            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO14);
 
             Config config = new Config();
 
@@ -47,6 +49,20 @@ namespace JFarlette.LightController
 
             Controller lc = new Controller(config, system, LR);
             lc.Control();
+        }
+
+     
+        static void RelayTest()
+        {
+            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO14);
+            while (true)
+            {
+                if (LR.IsTurnedOn())
+                    LR.TurnOff();
+                else
+                    LR.TurnOn();
+                Thread.Sleep(2000);
+            }
         }
     }
 
