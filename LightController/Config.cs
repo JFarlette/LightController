@@ -74,11 +74,20 @@ namespace JFarlette.LightController
         static Config()
         {
             DstDates = new Hashtable();
-            DstDates.Add(2014, new DstDate(new DateTime(2014, 3, 9), new DateTime(2014, 11, 2)));
-            DstDates.Add(2015, new DstDate(new DateTime(2015, 3, 8), new DateTime(2015, 11, 1)));
             DstDates.Add(2016, new DstDate(new DateTime(2016, 3, 13), new DateTime(2016, 11, 6)));
             DstDates.Add(2017, new DstDate(new DateTime(2017, 3, 12), new DateTime(2017, 11, 5)));
             DstDates.Add(2018, new DstDate(new DateTime(2018, 3, 11), new DateTime(2018, 11, 4)));
+            DstDates.Add(2019, new DstDate(new DateTime(2019, 3, 10), new DateTime(2019, 11, 3)));
+            DstDates.Add(2020, new DstDate(new DateTime(2020, 3, 8), new DateTime(2020, 11, 1)));
+            DstDates.Add(2021, new DstDate(new DateTime(2021, 3, 14), new DateTime(2021, 11, 7)));
+            DstDates.Add(2022, new DstDate(new DateTime(2022, 3, 13), new DateTime(2022, 11, 6)));
+            DstDates.Add(2023, new DstDate(new DateTime(2023, 3, 12), new DateTime(2023, 11, 5)));
+            DstDates.Add(2024, new DstDate(new DateTime(2024, 3, 10), new DateTime(2024, 11, 3)));
+            DstDates.Add(2025, new DstDate(new DateTime(2025, 3, 9), new DateTime(2025, 11, 2)));
+            DstDates.Add(2026, new DstDate(new DateTime(2026, 3, 8), new DateTime(2026, 11, 1)));
+            DstDates.Add(2027, new DstDate(new DateTime(2027, 3, 14), new DateTime(2027, 11, 7)));
+            DstDates.Add(2028, new DstDate(new DateTime(2028, 3, 12), new DateTime(2028, 11, 5)));
+            DstDates.Add(2029, new DstDate(new DateTime(2029, 3, 11), new DateTime(2029, 11, 4)));
         }
 
         public bool IsDstInEffect(DateTime date)

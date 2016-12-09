@@ -20,7 +20,7 @@ namespace JFarlette.LightController
         {
             FEZ_Shields.KeypadLCD.Initialize();
 
-            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO14);
+            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO44);
 
             Config config = new Config();
 
@@ -39,7 +39,7 @@ namespace JFarlette.LightController
         
         static void ControllerTest()
         {
-            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO14);
+            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO44);
 
             Config config = new Config();
 
@@ -54,7 +54,8 @@ namespace JFarlette.LightController
      
         static void RelayTest()
         {
-            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO14);
+            //LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO14);
+            LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO44);
             while (true)
             {
                 if (LR.IsTurnedOn())
