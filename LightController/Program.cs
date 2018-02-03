@@ -3,6 +3,9 @@ using System.Threading;
 using GHIElectronics.NETMF.FEZ;
 using Microsoft.SPOT.Hardware;
 using JFarlette.LightController.LCD_2x16;
+using GHIElectronics.NETMF.Hardware;
+
+using Microsoft.SPOT;
 
 
 namespace JFarlette.LightController
@@ -12,8 +15,9 @@ namespace JFarlette.LightController
         public static void Main()
         {
             // RelayTest();
-            // ControllerTest();
+            //ControllerTest();
             StartController();
+
         }
 
         static void StartController()
@@ -22,33 +26,49 @@ namespace JFarlette.LightController
 
             LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO44);
 
-            Config config = new Config();
+            ISystemServices system = new DotNetSystemServices();
+            Debug.Print("Date & Time: " + system.Now.ToString(Config.DATETIME_FORMAT));
 
-            Setup_Lcd_2x16.DoSetup(config);
+            Config config = new Config(system.Now);
 
-            DotNetSystemServices system = new DotNetSystemServices();
+            bool useDefaultSetup = system.Now.Year > 2000;
+            do
+            {
+                if (!useDefaultSetup)
+                {
+                    Setup_Lcd_2x16.DoSetup(config, system);
+                }
+                useDefaultSetup = false;
 
-            system.SetLocalTime(config.StartingDateTime);
+                Controller lc = new Controller(config, system, LR);
+                
+                lc.Start();
 
-            Controller lc = new Controller(config, system, LR);
+                Monitor_Lcd_2x16.DoMonitor(lc, config, system);
 
-            Monitor_Lcd_2x16.DoMonitor(lc, config, system);
+                lc.Abort();
 
-            lc.Control();
+                config.UpdateStartingDateTime(system.Now);
+            }
+            while (true);
         }
+
+        
         
         static void ControllerTest()
         {
+            FEZ_Shields.KeypadLCD.Initialize();
+
             LightRelay LR = new LightRelay((Cpu.Pin)FEZ_Pin.Digital.IO44);
 
             Config config = new Config();
 
-            TestSystemServices system = new TestSystemServices();
+            ISystemServices system = new TestSystemServices();
 
             system.SetLocalTime(config.StartingDateTime);
 
             Controller lc = new Controller(config, system, LR);
-            lc.Control();
+            lc.Start();
         }
 
      

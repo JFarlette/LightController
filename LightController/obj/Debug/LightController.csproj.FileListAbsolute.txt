@@ -33,9 +33,9 @@ C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightCo
 C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\JFarlette.LightController.Resources.tinyresources
 C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\TinyResGen.cache
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\LightControllerApp.exe
+C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\LightControllerApp.pdb
 C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\be\LightControllerApp.pe
 C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\be\LightControllerApp.pdbx
 C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\le\LightControllerApp.pe
 C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\le\LightControllerApp.pdbx
-C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\LightControllerApp.exe
-C:\Documents and Settings\Jason\My Documents\Visual Studio 2010\Projects\LightController\LightController\obj\Debug\LightControllerApp.pdb

@@ -33,6 +33,8 @@ namespace JFarlette.LightController.LCD_2x16
         private static void PrintValue(bool b, string trueName, string falseName)
         {
             FEZ_Shields.KeypadLCD.SetCursor(1, 0);
+            FEZ_Shields.KeypadLCD.Print("                ");
+            FEZ_Shields.KeypadLCD.SetCursor(1, 0);
             FEZ_Shields.KeypadLCD.Print(b ? trueName : falseName);
         }
     }
