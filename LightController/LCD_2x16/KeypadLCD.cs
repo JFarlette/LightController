@@ -41,6 +41,7 @@ namespace GHIElectronics.NETMF.FEZ
             static AnalogIn AnKey;
 
             static OutputPort BackLight;
+            static bool BacklightOn;
 
             const byte DISP_ON = 0xC;    //Turn visible LCD on
             const byte CLR_DISP = 1;      //Clear display
@@ -60,6 +61,7 @@ namespace GHIElectronics.NETMF.FEZ
                 AnKey = new AnalogIn((AnalogIn.Pin)FEZ_Pin.AnalogIn.An0);
 
                 BackLight = new OutputPort((Cpu.Pin)FEZ_Pin.Digital.Di10, true);
+                BacklightOn = true;
 
                 LCD_RS.Write(false);
 
@@ -234,12 +236,21 @@ namespace GHIElectronics.NETMF.FEZ
             public static void TurnBacklightOn()
             {
                 BackLight.Write(true);
+                BacklightOn = true;
             }
 
             public static void ShutBacklightOff()
             {
+                Clear();
                 BackLight.Write(false);
+                BacklightOn = false;
             }
+
+            public static bool IsBacklightOn()
+            {
+                return BacklightOn;
+            }
+
         }
     }
 }

@@ -54,6 +54,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ISystemServices.cs" />
+    <Compile Include="RTC_DS3231.cs" />
     <Compile Include="SunCalculator.cs" />
     <Compile Include="DotNetSystemServices.cs" />
     <Compile Include="LCD_2x16\TimeEditor.cs" />

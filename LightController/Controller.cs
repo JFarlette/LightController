@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Microsoft.SPOT;
 using System.Collections;
 
@@ -16,33 +17,60 @@ namespace JFarlette.LightController
             ScheduleLights();
         }
 
-        public void Control()
+        public void Start()
         {
-            Debug.Print("Control starting...");
-            do
+            m_controlThread = new Thread(new ThreadStart(Control));
+            m_controlThread.Start();
+        }
+
+        public void Abort()
+        {
+            m_controlThread.Abort();
+            m_controlThread.Join();
+        }
+
+        private void Control()
+        {
+            if (m_config.IsModeManual)
             {
-                LightEvent le = (LightEvent)m_events.Dequeue();
-                TimeSpan delay = le.DT - m_services.Now;
-                Debug.Print("Sleeping until: " + le.DT.ToString(m_config.DATETIME_FORMAT));
-                m_services.Sleep(TimeSpanUtility.TimeSpanTotalMilliseconds(delay));
-                switch (le.Type)
+                if (m_config.IsLightOn)
                 {
-                    case LightEventType.Scheduled_On:
-                    case LightEventType.Sunset_On:
-                        Debug.Print("Turning light ON: " + m_services.Now.ToString(m_config.DATETIME_FORMAT));
-                        m_relay.TurnOn();
-                        break;
-                    case LightEventType.Sunrise_Off: 
-                    case LightEventType.Scheduled_Off:
-                        Debug.Print("Turning light OFF: " + m_services.Now.ToString(m_config.DATETIME_FORMAT));
-                        m_relay.TurnOff();
-                        break;
-                    case LightEventType.Tomorrow:
-                        ScheduleLights();
-                        break;
+                    m_relay.TurnOn();
                 }
+                else
+                {
+                    m_relay.TurnOff();
+                }
+                m_services.Sleep(Timeout.Infinite);
             }
-            while (true);
+            else
+            {
+                Debug.Print("Control loop starting...");
+                do
+                {
+                    LightEvent le = (LightEvent)m_events.Dequeue();
+                    SleepUntil(le);
+                    Debug.Print("End of Sleep.  Executing event: " + le.ToString(Config.DATETIME_DEBUG_FORMAT));
+                    switch (le.Type)
+                    {
+                        case LightEventType.Scheduled_On:
+                        case LightEventType.Sunset_On:
+                            Debug.Print("Turning light ON: " + m_services.Now.ToString(Config.DATETIME_DEBUG_FORMAT));
+                            m_relay.TurnOn();
+                            break;
+                        case LightEventType.Sunrise_Off:
+                        case LightEventType.Scheduled_Off:
+                            Debug.Print("Turning light OFF: " + m_services.Now.ToString(Config.DATETIME_DEBUG_FORMAT));
+                            m_relay.TurnOff();
+                            break;
+                        case LightEventType.Schedule_Tomorrow:
+                            ScheduleLights();
+                            break;
+                    }
+                    Debug.Print("Bottom of Controller loop");
+                }
+                while (true);
+            }
         }
 
         public LightTimes GetLightTimes()
@@ -65,7 +93,7 @@ namespace JFarlette.LightController
             Sunrise_Off,
             Sunset_On,
             Scheduled_Off,
-            Tomorrow
+            Schedule_Tomorrow
         }
 
         class LightEvent
@@ -76,9 +104,22 @@ namespace JFarlette.LightController
                 Type = type;
             }
 
+            private string TypeAsString()
+            {
+                switch(Type)
+                {
+                    case LightEventType.Scheduled_On: return "Schedule_On";
+                    case LightEventType.Sunrise_Off: return "Sunrise_Off";
+                    case LightEventType.Sunset_On: return "Sunset_On";
+                    case LightEventType.Scheduled_Off: return "Schedule_Off";
+                    case LightEventType.Schedule_Tomorrow: return "Schedule_Tomorrow";
+                    default: return "Unknown";
+                }
+            }
+
             public string ToString(string format)
             {
-                return DT.ToString(format) + " - " + Type.ToString();
+                return DT.ToString(format) + " - " + TypeAsString();
             }
 
             public DateTime DT;
@@ -173,23 +214,45 @@ namespace JFarlette.LightController
             return les;
         }
 
+        private void SleepUntil(LightEvent le)
+        {
+            Debug.Print("Sleeping until: " + le.ToString(Config.DATETIME_DEBUG_FORMAT));
+            DateTime now = m_services.Now;
+            bool done = false;
+            do
+            {
+                TimeSpan delay = le.DT - now;
+                
+                int ms = TimeSpanUtility.TimeSpanTotalMilliseconds(delay);
+                Debug.Print("Sleeping for " + TimeSpanUtility.FormatTimespanSHHMMSS(delay) + " (" + ms  + " ms)");
+                m_services.Sleep(ms);
+                now = m_services.Now;
+                done = now >= le.DT;
+                if (!done)
+                {
+                    Debug.Print("Awoke too early - sleeping again");
+                }
+            }
+            while (!done);
+        }
+
         private void ScheduleLights()
         {
-            Debug.Print("Scheduling lights: " + m_services.Now.ToString(m_config.DATETIME_FORMAT));
+            Debug.Print("Scheduling lights: " + m_services.Now.ToString(Config.DATETIME_DEBUG_FORMAT));
 
             bool isDstToday = m_config.IsDstInEffect(m_services.Now);
             if (isDstToday && !m_isDst)
             {
                 // Spring a head
                 m_services.SetLocalTime(m_services.Now + new TimeSpan(1, 0, 0));
-                Debug.Print("DST starting.  Time now: " + m_services.Now.ToString(m_config.DATETIME_FORMAT));
+                Debug.Print("DST starting.  Time now: " + m_services.Now.ToString(Config.DATETIME_DEBUG_FORMAT));
                 m_isDst = isDstToday;
             }
             else if (m_isDst && !isDstToday)
             {
                 // Fall back
                 m_services.SetLocalTime(m_services.Now - new TimeSpan(1, 0, 0));
-                Debug.Print("DST over.  Time now: " + m_services.Now.ToString(m_config.DATETIME_FORMAT));
+                Debug.Print("DST over.  Time now: " + m_services.Now.ToString(Config.DATETIME_DEBUG_FORMAT));
                 m_isDst = isDstToday;
             }
 
@@ -227,14 +290,14 @@ namespace JFarlette.LightController
                 for (int i = prevIndex + 1; i < les.Count; i++)
                 {
                     LightEvent le = (LightEvent)les[i];
-                    Debug.Print("Enqueing LE: " + le.ToString(m_config.DATETIME_FORMAT));
+                    Debug.Print("Enqueing LE: " + le.ToString(Config.DATETIME_DEBUG_FORMAT));
                     m_events.Enqueue(le);
                 }
             }
 
             // Schedule the event to schedule tomorrows events
-            LightEvent scheduleEvent = new LightEvent(m_services.Now.Date + new TimeSpan(1, 0, 0, 0), LightEventType.Tomorrow);
-            Debug.Print("Enqueing LE: " + scheduleEvent.ToString(m_config.DATETIME_FORMAT));
+            LightEvent scheduleEvent = new LightEvent(m_services.Now.Date + new TimeSpan(1, 0, 0, 0), LightEventType.Schedule_Tomorrow);
+            Debug.Print("Enqueing LE: " + scheduleEvent.ToString(Config.DATETIME_DEBUG_FORMAT));
             m_events.Enqueue(scheduleEvent);
         }
 
@@ -251,5 +314,9 @@ namespace JFarlette.LightController
         Queue m_events = new Queue();
 
         bool m_isDst;
+
+        Thread m_controlThread;
+
+        
     }
 }
