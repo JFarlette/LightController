@@ -109,6 +109,7 @@ namespace JFarlette.LightController
             DstDates.Add(2028, new DstDate(new DateTime(2028, 3, 12), new DateTime(2028, 11, 5)));
             DstDates.Add(2029, new DstDate(new DateTime(2029, 3, 11), new DateTime(2029, 11, 4)));
             DstDates.Add(2030, new DstDate(new DateTime(2030, 3, 10), new DateTime(2030, 11, 3)));
+            DstDates.Add(2031, new DstDate(new DateTime(2031, 3, 9), new DateTime(2031, 11, 2)));
         }
 
         public bool IsDstInEffect(DateTime date)
